@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBT Quiz</title>
+  <link rel="stylesheet" href="Styles/style.css" />
+</head>
+<body>
+
+  <!--  WELCOME  -->
+  <div id="start-screen" class="hero fade-in">
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to <span>PIO 212</span></h1>
+      <p class="tagline">Test your knowledge. 30 seconds per question.</p>
+      <button id="start-btn" class="primary-btn">Start Quiz</button>
+    </div>
+    <div class="hero-bg"></div>
+  </div>
+
+  <!--  QUIZ  -->
+  <div id="quiz-container" class="card hidden fade-in">
+    <div id="progress-wrap">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div class="top-bar">
+      <span id="timer">30 sec</span>
+      <span id="score">Score: 0/0</span>
+    </div>
+
+    <img src="" alt="question" class="question-image" style="display:none;" />
+    <h2 id="question">Question text</h2>
+    <ul id="options"></ul>
+    <div id="explanation" style="display:none;margin-top:12px;color:#555;"></div>
+
+    <button id="next-btn" disabled>Next</button>
+
+    <!-- RESULT -->
+    <div id="result" style="display:none;margin-top:20px;text-align:center;"></div>
+    <button id="restart-btn" class="primary-btn" style="display:none;">Restart Quiz</button>
+  </div>
+
+  <!--  SOUNDS  -->
+  <audio id="sound-correct" src="Audio/correct-156911.mp3"></audio>
+  <audio id="sound-wrong"   src="Audio/buzzer-or-wrong-answer-20582.mp3"></audio>
+
+  <script src="Script/script.js"></script>
+</body>
+</html>
